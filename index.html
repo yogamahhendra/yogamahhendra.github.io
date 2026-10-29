@@ -1,45 +1,456 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>About me</title>
+  <meta charset="UTF-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoga Mahendra — Software Engineer</title>
+  <meta name="description" content="Software engineer based in Bali, Indonesia. I build backend services, automation tools, system integrations, and infrastructure solutions." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yoga Mahendra — Software Engineer" />
+  <meta property="og:description" content="Software engineer based in Bali, Indonesia. I build backend services, automation tools, system integrations, and infrastructure solutions." />
+  <meta property="og:url" content="https://yogamahhendra.github.io" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#315B48" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://yogamahhendra.github.io" />
+
+  <!-- Favicon: SVG initials -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body style="background-image: url(img/latar.jpg);
-    	 	background-position: top:100%;
-     		background-size:100%;">
-	<div class="container" style="background-color: white;
- 		 width: 1080px;
- 		 padding: 50px;
- 		 margin-top:80px;
-  		 margin-left:auto;
-  		 margin-right:auto;">
-  		 <div class="profpic">
-  		 	<img src="img/pp.jpg" style="width:30%;
-  		 								display:block;
-  		 								margin-left:auto;
-  		 								margin-right:auto;
-  		 								border-radius:50%">
-  		 </div>
-  		 <h1 style="text-align:center;"> Hi! Saya Yoga </h1>
-  		 <p style="text-align:justify;"> Hai semua perkenalkan nama aku I Made Yoga Mahendra, biasa akrab dipanggil Yoga. Aku merupakan mahasiswa Ilmu Komputer Universitas Udayana. Aku mempunya Hobi Fotografi, Traveling dan bermain game. Salah satu inspirasiku di Fotografi dan Travelling yaitu
-  		 <a href="http://www.iwwmphotography.com/home" target="frameku">@iwwm</a>
-  		 yang akrab disapa Kak Wahyu.
-  		 <p> <iframe name="frameku" width="1000" height="400"> </iframe> </p>
-  		 Untuk Portofolio dan Sosial media aku bisa di cek bawah ini </p>
-  		 <button onclick="document.location='portofolio.html'" style="display:block;" target="_self">My Portofolio</button>
-  		 <a href="https://www.instagram.com/yogamahhendra/" target="_blank"><img src=img/ig.png style="width:40px;
-  		 		margin-left:470px;
-  		 		margin-right:auto;">
-	  	</a>
-	  	<a href="https://www.facebook.com/yoga.mahendra.yoga" target="_blank"><img src=img/fb.png style="width:40px;
-	  			margin-left:5px;
-  		 		margin-right:auto;">
-  		</a>
-  		<a href="https://www.youtube.com/channel/UC4KgQW61ewYVzniwlwhwGlg" target="_blank"><img src=img/yt.png style="width:40px;
-	  			margin-left:5px;
-  		 		margin-right:auto;">
-  		</a>
-	  	</div>
-	</div>
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="#top" class="header-name" aria-label="Yoga Mahendra — home">Yoga Mahendra</a>
+      <nav class="header-nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer" class="nav-github">
+          GitHub
+          <svg class="ext-icon" aria-hidden="true" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </nav>
+      <!-- Mobile nav toggle -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile drawer -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero section-pad" aria-labelledby="hero-headline">
+      <div class="container">
+        <p class="eyebrow hero-anim hero-anim--1" aria-label="Role and location">SOFTWARE ENGINEER &middot; BALI, INDONESIA</p>
+        <h1 id="hero-headline" class="hero-headline hero-anim hero-anim--2">
+          I build software<br />that solves real problems.
+        </h1>
+        <p class="hero-body hero-anim hero-anim--3">
+          From backend services and automation tools to system integrations
+          and infrastructure, I focus on building practical solutions that
+          work in the real world.
+        </p>
+        <div class="hero-actions hero-anim hero-anim--4">
+          <a href="#work" class="btn btn-primary">Explore selected work</a>
+          <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub
+            <svg aria-hidden="true" width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <p class="hero-meta mono hero-anim hero-anim--4">Go &middot; Laravel &middot; TypeScript &middot; Systems &amp; Automation</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SELECTED WORK
+    ============================================================ -->
+    <section class="work section-pad" id="work" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 id="work-heading" class="section-label">Selected Work</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+
+        <ol class="project-list" aria-label="Selected projects">
+
+          <!-- Project 01 -->
+          <li class="project-item project-item--featured" data-reveal>
+            <article aria-labelledby="proj-1-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">01</span>
+                  <span class="project-category mono">CLI / AUTOMATION</span>
+                </div>
+                <h3 id="proj-1-title" class="project-title">Lark Drive Bulk Downloader</h3>
+              </header>
+              <p class="project-description">
+                A Go CLI for downloading files in bulk from public Lark and Feishu Drive shared folders.
+                Lark&#8217;s web interface uses a virtualized scroller &mdash; only the first 50 items exist in memory
+                on page load, and standard HTTP clients are redirected to authentication gateways before
+                they can reach any files. This tool solves both problems: it uses a headless Chrome session
+                via the Chrome DevTools Protocol to unroll the full folder index through automated scrolling,
+                then streams each file concurrently to disk using a configurable worker pool. The resulting
+                binary is self-contained and cross-platform.
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>Go</li>
+                  <li>CDP / Headless Chrome</li>
+                  <li>Concurrent I/O</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/lark-drive-bulk-downloader" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Lark Drive Bulk Downloader on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <!-- Project 02 -->
+          <li class="project-item" data-reveal>
+            <article aria-labelledby="proj-2-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">02</span>
+                  <span class="project-category mono">DEVELOPER TOOLING</span>
+                </div>
+                <h3 id="proj-2-title" class="project-title">Static CMS</h3>
+              </header>
+              <p class="project-description">
+                An open-source static asset management system built around stable, permanent public URLs.
+                The core design: when a file is replaced, its URL stays the same. The system stages the
+                new object in S3, verifies database integrity, then deletes the old object atomically &mdash;
+                no broken links during the transition. Raster images are automatically converted to WebP,
+                EXIF data is stripped, SVG files are sanitized against embedded scripts, and JSON schemas
+                are minified on upload. Access is controlled through tiered roles (superadmin, admin, editor, viewer).
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>TypeScript</li>
+                  <li>Next.js</li>
+                  <li>PostgreSQL</li>
+                  <li>S3-compatible storage</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/static-content" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Static CMS on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <!-- Project 03 -->
+          <li class="project-item project-item--featured" data-reveal>
+            <article aria-labelledby="proj-3-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">03</span>
+                  <span class="project-category mono">FULL-STACK APPLICATION</span>
+                </div>
+                <h3 id="proj-3-title" class="project-title">Shortener URL</h3>
+              </header>
+              <p class="project-description">
+                An open-source URL shortener with a Go backend (Fiber framework) and a React frontend.
+                Creates short links, generates QR codes with destination text overlay, tracks click counts
+                and unique visitors per URL, and supports CSV batch import of up to 1,000 URLs per operation.
+                A bulk QR download endpoint packages multiple QR images into a ZIP archive.
+                The API applies rate limiting at 100 requests per minute per IP. No login required &mdash;
+                client state is stored in IndexedDB.
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>Go</li>
+                  <li>React</li>
+                  <li>TypeScript</li>
+                  <li>PostgreSQL</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/shortener-url" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Shortener URL on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <!-- Project 04 -->
+          <li class="project-item" data-reveal>
+            <article aria-labelledby="proj-4-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">04</span>
+                  <span class="project-category mono">SYSTEM UTILITIES</span>
+                </div>
+                <h3 id="proj-4-title" class="project-title">Disk Space Analyzer</h3>
+              </header>
+              <p class="project-description">
+                Two PowerShell scripts for identifying which directories consume the most space
+                on a Windows system. The enhanced version adds hidden and system folder scanning,
+                full drive usage summary with percentages, and analysis of space not accounted for
+                by visible folders &mdash; useful for locating pagefile, hibernation, and shadow copy allocations.
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>PowerShell</li>
+                  <li>Windows</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/disk-space-analyzer-windows" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Disk Space Analyzer on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <!-- Project 05 -->
+          <li class="project-item" data-reveal>
+            <article aria-labelledby="proj-5-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">05</span>
+                  <span class="project-category mono">DESKTOP UTILITY</span>
+                </div>
+                <h3 id="proj-5-title" class="project-title">String Aggregator</h3>
+              </header>
+              <p class="project-description">
+                A Windows system tray utility that converts multiline clipboard text into comma-separated
+                values &mdash; quoted (<code class="inline-code">'a','b','c'</code>) or plain
+                (<code class="inline-code">a,b,c</code>). Useful when constructing SQL
+                <code class="inline-code">IN</code> clauses from large sets of IDs. Supports duplicate
+                removal, sorting, and leading-zero trimming. Built in Go using the systray API.
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>Go</li>
+                  <li>Windows Systray</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/string-aggregator" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View String Aggregator on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+          <!-- Project 06 -->
+          <li class="project-item" data-reveal>
+            <article aria-labelledby="proj-6-title">
+              <header class="project-header">
+                <div class="project-meta-row">
+                  <span class="project-index mono">06</span>
+                  <span class="project-category mono">PERSONAL FINANCE / ANALYTICS</span>
+                </div>
+                <h3 id="proj-6-title" class="project-title">Finora</h3>
+              </header>
+              <p class="project-description">
+                A personal finance analytics project in progress. The intent is to help users understand
+                their cash flow through data visualizations and insights. Currently in early development.
+              </p>
+              <footer class="project-footer">
+                <ul class="tech-list mono" aria-label="Technologies">
+                  <li>TypeScript</li>
+                </ul>
+                <a href="https://github.com/yogamahhendra/finora" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Finora on GitHub">
+                  View repository
+                  <svg aria-hidden="true" width="11" height="11" viewBox="0 0 10 10" fill="none">
+                    <path d="M1.5 8.5L8.5 1.5M8.5 1.5H3.5M8.5 1.5V6.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </footer>
+            </article>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ENGINEERING APPROACH
+    ============================================================ -->
+    <section class="approach section-pad" id="approach" aria-labelledby="approach-heading">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <h2 id="approach-heading" class="section-label">Engineering Approach</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+        <ol class="principles-list" aria-label="Engineering principles">
+          <li class="principle-item" data-reveal>
+            <span class="principle-num mono" aria-hidden="true">I</span>
+            <div class="principle-body">
+              <h3 class="principle-title">Solve the actual problem</h3>
+              <p class="principle-desc">
+                Understand what&#8217;s happening in practice before choosing a technology or designing a solution.
+                A clear problem statement usually reveals a simpler path than what&#8217;s initially assumed.
+              </p>
+            </div>
+          </li>
+          <li class="principle-item" data-reveal data-reveal-delay="1">
+            <span class="principle-num mono" aria-hidden="true">II</span>
+            <div class="principle-body">
+              <h3 class="principle-title">Make systems work together</h3>
+              <p class="principle-desc">
+                Build APIs, automation, and data flows that reduce repetitive work and connect systems
+                that need to exchange information. Integration work is often where the most friction
+                actually lives.
+              </p>
+            </div>
+          </li>
+          <li class="principle-item" data-reveal data-reveal-delay="2">
+            <span class="principle-num mono" aria-hidden="true">III</span>
+            <div class="principle-body">
+              <h3 class="principle-title">Keep things maintainable</h3>
+              <p class="principle-desc">
+                Favor clear interfaces, predictable behavior, and practical documentation. Software that
+                works at launch but can&#8217;t be understood or changed six months later is only half-finished.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+    ============================================================ -->
+    <section class="about section-pad" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-heading" class="section-label">About</h2>
+          <div class="section-rule" aria-hidden="true"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-left">
+            <div class="about-intro-row" data-reveal>
+              <figure class="about-photo-wrap">
+                <img
+                  src="img/profil_picture.jpg"
+                  alt="Yoga Mahendra"
+                  class="about-photo"
+                  width="140"
+                  height="140"
+                  loading="lazy"
+                />
+              </figure>
+              <div class="about-lead">
+                <p>
+                  I&#8217;m Yoga, a software engineer based in Bali, Indonesia. My work and personal projects
+                  span application development, backend services, automation, and system integration.
+                </p>
+              </div>
+            </div>
+            <div class="about-text" data-reveal data-reveal-delay="1">
+              <p>
+                I enjoy building tools that remove repetitive work, connecting systems that need to
+                exchange data, and understanding what it takes to keep software useful beyond the
+                initial implementation.
+              </p>
+              <p>
+                This site is a collection of selected projects and things I&#8217;ve built along the way.
+              </p>
+            </div>
+          </div>
+          <aside class="about-meta" aria-label="Technology areas">
+            <h3 class="meta-group-label mono">Technology areas</h3>
+            <dl class="meta-list">
+              <div class="meta-row">
+                <dt>Backend</dt>
+                <dd class="mono">Go, PHP, Laravel</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Frontend</dt>
+                <dd class="mono">TypeScript, JavaScript, Vue, React</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Data</dt>
+                <dd class="mono">MySQL, PostgreSQL, SQL Server</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Infrastructure</dt>
+                <dd class="mono">Linux, Windows Server, AWS</dd>
+              </div>
+              <div class="meta-row">
+                <dt>Interests</dt>
+                <dd class="mono">CLI tools, API integration, workflow automation, system reliability</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+    ============================================================ -->
+    <section class="contact section-pad" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-inner">
+          <h2 id="contact-heading" class="contact-prompt">Have a useful problem to solve?</h2>
+          <p class="contact-sub">
+            I&#8217;m open to discussing software, automation, and engineering ideas.
+          </p>
+          <div class="contact-links">
+            <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <span class="contact-link-label mono">github</span>
+              <span class="contact-link-value">yogamahhendra &#8599;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <span class="footer-name">Yoga Mahendra</span>
+        <span class="footer-location mono">Bali, Indonesia</span>
+      </div>
+      <div class="footer-right mono">
+        <span id="footer-year"></span>
+        <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">GitHub &#8599;</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
 </html>
