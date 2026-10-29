@@ -23,7 +23,11 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -51,7 +55,7 @@
       </button>
     </div>
     <!-- Mobile drawer -->
-    <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="https://github.com/yogamahhendra" target="_blank" rel="noopener noreferrer">GitHub &#8599;</a>
@@ -357,14 +361,18 @@
           <div class="about-left">
             <div class="about-intro-row" data-reveal>
               <figure class="about-photo-wrap">
-                <img
-                  src="img/profil_picture.jpg"
-                  alt="Yoga Mahendra"
-                  class="about-photo"
-                  width="140"
-                  height="140"
-                  loading="lazy"
-                />
+                <picture>
+                  <source srcset="img/profil_picture-320.webp" type="image/webp" />
+                  <img
+                    src="img/profil_picture-320.jpg"
+                    alt="Yoga Mahendra"
+                    class="about-photo"
+                    width="140"
+                    height="140"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
               </figure>
               <div class="about-lead">
                 <p>
@@ -451,6 +459,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

@@ -287,7 +287,8 @@ ol, ul { list-style: none; }
 @media (max-width: 640px) {
   .header-nav { display: none; }
   .nav-toggle { display: flex; }
-  .mobile-nav { display: flex; }
+  .mobile-nav:not(.open) { display: none !important; }
+  .mobile-nav.open { display: flex; }
 }
 
 /* ============================================================
@@ -898,18 +899,27 @@ ol, ul { list-style: none; }
 
 /* ============================================================
    HERO LOAD-IN ANIMATIONS
-   Staggered fade-up sequence on page load
+   Staggered entrance sequence on page load (optimized for LCP)
 ============================================================ */
 .hero-anim {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 700ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: heroFadeUp 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.hero-anim--1 { animation-delay: 80ms; }
-.hero-anim--2 { animation-delay: 200ms; }
-.hero-anim--3 { animation-delay: 340ms; }
-.hero-anim--4 { animation-delay: 480ms; }
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0.15;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-anim--1 { animation-delay: 30ms; }
+.hero-anim--2 { animation-delay: 70ms; }
+.hero-anim--3 { animation-delay: 120ms; }
+.hero-anim--4 { animation-delay: 180ms; }
 
 /* ============================================================
    SCROLL REVEAL
